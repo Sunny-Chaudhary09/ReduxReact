@@ -12,7 +12,9 @@ export default function Details({navigation , route}) {
   console.log("data from previous screen ", details)
 
   const storeData = useSelector(state => state.myData)
+
   const index=storeData.findIndex(target => target.id ==details.id)
+  
   const targetval= storeData[index]
 
   const onInc = (targetval) => {
